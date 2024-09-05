@@ -1,0 +1,89 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.nav {
+  height: 10vh;
+  width: 100vw;
+}
+.nav img {
+  margin: 8px !important;
+}
+
+.heading {
+  width: 68%;
+  border-left: 8px solid rgba(255, 206, 92, 1);
+  padding-left: 35px;
+}
+.about {
+  color: white;
+  width: 100vw;
+  height: 70vh;
+  background-color: rgba(0, 49, 69, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro_desc {
+  width: 50%;
+}
+
+.intro_desc p {
+  padding-left: 42px;
+  width: 70%;
+  font-size: small;
+}
+
+.intro_desc button {
+  margin-left: 42px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+  color: rgba(0, 49, 69, 1);
+  margin-top: 10px;
+}
+
+.intro_img {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.stats {
+  color: white;
+  width: 100vw;
+  height: 20vh;
+  background-color:rgba(0, 42, 59, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin: 0px 20px;
+}
+
+.line{
+    border-left: 0.5px solid rgba(255, 255, 255, 0.505);
+    height: 30%;
+    margin: 0px 20px;
+}
+.stat-text{
+    line-height: 9px;
+}
