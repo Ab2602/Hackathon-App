@@ -6,6 +6,8 @@ body {
 .nav {
   height: 10vh;
   width: 100%;
+  box-sizing: border-box;
+  padding-left: 50px;
 }
 .nav img {
   margin: 8px !important;
