@@ -1,0 +1,22 @@
+.partiDiv{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cards-partici{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-partici .card{
+    width: 35%;
+    background-color: rgba(248, 249, 253, 1);
+    margin: 10px;
+    padding: 15px;
+}

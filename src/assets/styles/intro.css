@@ -5,7 +5,7 @@ body {
 }
 .nav {
   height: 10vh;
-  width: 100vw;
+  width: 100%;
 }
 .nav img {
   margin: 8px !important;
@@ -18,7 +18,7 @@ body {
 }
 .about {
   color: white;
-  width: 100vw;
+  width: 100%;
   height: 70vh;
   background-color: rgba(0, 49, 69, 1);
   display: flex;
@@ -64,7 +64,7 @@ body {
 
 .stats {
   color: white;
-  width: 100vw;
+  width: 100%;
   height: 20vh;
   background-color:rgba(0, 42, 59, 1);
   display: flex;
