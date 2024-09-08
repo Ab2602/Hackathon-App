@@ -19,16 +19,34 @@ const Challenges = () => {
   const [timers, setTimers] = useState<{ [key: number]: { days: number, hours: number, minutes: number } }>({});
   const [statusFilter, setStatusFilter] = useState<string[]>([]);
   const [levelFilter, setLevelFilter] = useState<string[]>([]);
+  const [searchTerm, setSearchTerm] = useState<string>(''); // Add search state
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState<string>(''); // Add debounced search state
   const [showFilter, setShowFilter] = useState(false);
   const navigate = useNavigate(); // Initialize useNavigate
 
+  // Debounce the search term to prevent triggering search for every keystroke
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearchTerm(searchTerm);
+    }, 100); // 500ms delay for debounce
+
+    // Cleanup the timeout when the component unmounts or when searchTerm changes
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [searchTerm]);
+
+  // Fetch challenges based on the debounced search term
   useEffect(() => {
     fetch("http://localhost:3001/api/challenges")
       .then((response) => response.json())
       .then((data: Challenge[]) => {
         if (Array.isArray(data) && data.length > 0) {
-          setCardsData(data);
-          initializeTimers(data);
+          const filteredData = data.filter(challenge =>
+            challenge.challengeName.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
+          );
+          setCardsData(filteredData);
+          initializeTimers(filteredData);
         } else {
           setCardsData([]);
         }
@@ -39,7 +57,7 @@ const Challenges = () => {
         setCardsData([]);
         setIsLoading(false);
       });
-  }, []);
+  }, [debouncedSearchTerm]);
 
   const initializeTimers = (challenges: Challenge[]) => {
     const updatedTimers: { [key: number]: { days: number, hours: number, minutes: number } } = {};
@@ -66,7 +84,7 @@ const Challenges = () => {
         }
       });
       setTimers(newTimers);
-    }, 1000);
+    }, 500);
 
     return () => clearInterval(interval);
   };
@@ -147,6 +165,8 @@ const Challenges = () => {
             id="search-form"
             className="search-input"
             placeholder="Search"
+            value={searchTerm} // Bind the search input
+            onChange={(e) => setSearchTerm(e.target.value)} // Update search term on change
           />
           <button className="filter-btn" onClick={() => setShowFilter(!showFilter)}>
             Filter <IoIosArrowDown />
