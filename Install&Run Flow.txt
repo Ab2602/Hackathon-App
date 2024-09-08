@@ -1,0 +1,36 @@
+Clone the repo
+
+git clone https://github.com/Ab2602/Hackathon-App.git
+
+Go to frontend folder
+
+cd frontend
+
+Install the dependencies
+
+npm install or npm i react-scripts
+
+Go to backend folder
+
+cd backend
+
+Install the dependencies
+
+npm install
+
+Now in frontend folder run the command 
+
+npm run dev
+
+In backend folder 
+
+node server.js
+
+Following operations can be done:-
+
+Read - Main page displays all the challenges present in the database.
+Create - click on create challenge on main page and you can create the challenge
+Edit/ Delete - click on any challenge and it will redirect you to the edit-challenge page.
+
+Database Used - Vercel PostgresSql 
+
