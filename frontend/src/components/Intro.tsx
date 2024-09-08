@@ -1,13 +1,19 @@
-//import React from 'react'
+import {useNavigate} from 'react-router-dom'
 import Logo from "../assets/images/logo.png";
 import Rocket from "../assets/images/rocket.svg";
 import Ai from "../assets/images/ai.svg";
 import DataScienc from "../assets/images/Group 1000002516.svg";
 import AiChallenge from "../assets/images/Group 1000002518.svg";
 
+
 import "../assets/styles/intro.css";
 
 const Intro = () => {
+  const navigate = useNavigate();
+  
+  const handleRedirect =()=>{
+    navigate('/create');
+  }
   return (
     <>
       <div className="nav">
@@ -24,7 +30,7 @@ const Intro = () => {
             allowing you to foster learning through competitions. Create
             Challenge
           </p>
-          <button>Create Challenge</button>
+          <button onClick={handleRedirect}>Create Challenge</button>
         </div>
         <div className="intro_img">
           <img src={Rocket} alt="rocketimg" />

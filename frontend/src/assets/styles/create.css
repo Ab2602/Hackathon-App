@@ -1,0 +1,67 @@
+.heading-create{
+    box-sizing: border-box;
+    background-color: rgba(248, 249, 253, 1);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+
+.create-form{
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.create-form label{
+    font-size: 15px;
+}
+
+.create-form input{
+    margin: 10px 0px;
+    width: 435px;
+    padding: 3px 1px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    color: #555;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin: 10px 0px;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .custom-file-upload svg {
+    margin-right: 8px;
+  }
+
+.create-btn{
+    padding: 10px;
+    background-color: rgba(68, 146, 76, 1);
+    color: white;
+    
+    border: none;
+    border-radius: 3px;
+    margin: 20px 0px;
+    font-size: 12px;
+}
+
+.create-form select{
+  margin: 10px 0px;
+}
+
+.create-form select {
+  padding: 7px;
+  width: 20%;
+}

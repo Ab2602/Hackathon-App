@@ -1,0 +1,190 @@
+.explore{
+    background-color: rgba(0, 42, 59, 1);
+    color: white;
+    height: 30vh;
+    box-sizing: border-box  ;
+}
+
+.explore h3{
+    /* margin: 20px 0px; */
+    padding: 30px 0px;
+    text-align: center;
+}
+
+.search-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search-form{
+    padding: 10px 20px;
+    width: 829px;
+    border-radius: 8px;
+    border: none;
+}
+
+.filter-btn{
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin: 0px 15px;
+}
+
+  
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    background-color: rgba(0, 49, 69, 1);
+    box-sizing: border-box;
+    justify-content: center;
+
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 45px;
+    width: 25%;
+    height: 70vh;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.05); /* Slightly scales up the card on hover */
+  }
+
+  .card-status {
+    /* position: absolute;
+    top: -10px;
+    left: 10px; */
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: normal;
+    display: inline;
+    font-size: 10px
+  }
+  
+  .card-status.Upcoming {
+    background-color: rgba(242, 201, 76, 0.25);
+    color: #000;
+  }
+  
+  .card-status.Active {
+    background-color: rgba(68, 146, 76, 0.24);
+    color: rgba(68, 146, 76, 1);
+  }
+  
+  .card-status.Past {
+    background-color: rgba(255, 60, 0, 0.17);
+    color: #000;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  .timer, .endedOn {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .card-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card-button:hover {
+    background-color: #218838;
+  }
+  
+
+  .card-image {
+    width: 100%;
+     /* Adjust height as needed */
+    /* object-fit:inherit; Ensures the image covers the area without distortion */
+  }
+ 
+  .timer-labels {
+    display: flex;
+    justify-content: center;
+    margin-top: 1px;
+    font-size: 5px;
+  }
+  
+  .timer-labels span {
+    font-size: 9px;
+    color: #666;
+    padding: 3px;
+  }
+  
+
+  /* Container for the dropdown */
+.filter-dropdown {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    width: 215px;
+    z-index: 100;
+    right: 50px;
+  }
+  
+  /* Each section inside the dropdown */
+
+  
+  .filter-section h4 {
+    margin: 0px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Label styling for checkboxes */
+  .filter-section label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .filter-section input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect on the labels */
+  .filter-section label:hover {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    /* padding: 4px; */
+  }
+  
+  /* General Dropdown Styles */
+  .filter-dropdown h4 {
+    font-weight: 500;
+    color: #222;
+  }
+  
+  .filter-dropdown div {
+    padding: 8px 0;
+  }
+  
