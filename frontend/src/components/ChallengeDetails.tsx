@@ -1,5 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Logo from "../assets/images/logo.png";
+import "../assets/styles/Challenge_detail.css";
 
 interface Challenge {
   id: number;
@@ -48,21 +50,56 @@ const ChallengeDetail = () => {
     }
   };
 
+  const formatDate = (isoString: string): string => {
+    const date = new Date(isoString);
+
+    // Get parts of the date
+    const day = date.getUTCDate();
+    const month = date.toLocaleString('en-US', { month: 'short' });
+    const year = date.getUTCFullYear();
+
+    // Get time in 12-hour format
+    let hours = date.getUTCHours();
+    const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12; // Convert 24-hour to 12-hour format
+
+    return `${day} ${month} ${year}, ${hours}:${minutes} ${ampm}`;
+  };
+
   if (!challenge) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div className="challenge-detail">
-      <img src={challenge.image} alt={challenge.challengeName} />
-      <h1>{challenge.challengeName}</h1>
-      <p>{challenge.description}</p>
-      <p><strong>Start Date:</strong> {new Date(challenge.startDate).toLocaleDateString()}</p>
-      <p><strong>End Date:</strong> {new Date(challenge.endDate).toLocaleDateString()}</p>
-      <p><strong>Level:</strong> {challenge.level}</p>
-      <button onClick={handleEdit}>Edit</button>
-      <button onClick={handleDelete}>Delete</button>
-    </div>
+    <>
+      <div className="nav">
+        <img src={Logo} alt="logo" width="7%" />
+      </div>
+
+      <div className="challenge_detail_card">
+        <div className="" >
+          <p className='challenge_time'>Starts on {formatDate(challenge.startDate)} (India Standard Time)</p>
+          <h1>{challenge.challengeName}</h1>
+          <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, aliquid. Quos, accusantium ratione impedit modi</span> 
+          <br/>
+          <p className="challenge_level"> {challenge.level}</p>
+
+        </div>
+        
+        <div className=""></div>
+      </div>
+      <div className="challenge_buttons">
+        <p>Overview</p>
+        <div className="">
+        <button className='challenge_edit' onClick={handleEdit}>Edit</button>
+        <button className='challenge_delete' onClick={handleDelete}>Delete</button>
+        </div>
+      </div>
+      <div className="challenge-detail">
+        <p>{challenge.description}</p>
+      </div>
+    </>
   );
 };
 

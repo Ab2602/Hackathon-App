@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
-import "../assets/styles/intro.css";
-import "../assets/styles/create.css";
+import "../assets/styles/edit_challenge.css";
 import { IoMdCloudUpload } from "react-icons/io";
 
 const EditDetails = () => {
@@ -94,10 +93,12 @@ const EditDetails = () => {
       <div className="nav">
         <img src={Logo} alt="logo" width="7%" />
       </div>
-      <div className="heading-create">
-        <h2>Edit Challenge</h2>
+      <div className="form">
+
+      <div className="heading_text">
+        <h2>Challenge Details</h2>
       </div>
-      <form onSubmit={handleSubmit} className="create-form">
+      <form onSubmit={handleSubmit} className="form-data">
         <label>Challenge Name</label>
         <br />
         <input
@@ -144,10 +145,20 @@ const EditDetails = () => {
           required
         ></textarea>
         <br />
-        <label>Image</label>
+        <p><strong>Image</strong></p>
         <br />
-        <label htmlFor="imageUpload" className="custom-file-upload">
-          Upload <IoMdCloudUpload />
+       
+        {imagePreviewUrl && (
+          <div>
+            <img
+              src={imagePreviewUrl}
+              alt="Selected"
+              style={{ width: "40vh", height: "20vh ", borderRadius:"3vh" }}
+            />
+          </div>
+        )}
+         <label htmlFor="imageUpload" className="" style={{color:"green", paddingBottom:"4vh "}}>
+          Change Image →
         </label>
         <input
           id="imageUpload"
@@ -156,18 +167,8 @@ const EditDetails = () => {
           onChange={handleImageChange}
           style={{ display: "none", margin: "10px 0px" }}
         />
-        {imagePreviewUrl && (
-          <div>
-            <h2>Image Preview:</h2>
-            <img
-              src={imagePreviewUrl}
-              alt="Selected"
-              style={{ width: "300px", height: "300px" }}
-            />
-          </div>
-        )}
         <br />
-        <label>Level Type</label>
+        <label style={{marginTop:"10vh"}}>Level Type</label>
         <br />
         <select
           name="level"
@@ -181,10 +182,11 @@ const EditDetails = () => {
         </select>
         <br />
         <button type="submit" className="create-btn">
-          {loading ? "Updating Challenge..." : "Update Challenge"}
+          {loading ? "Saving..." : "Save Changes"}
         </button>
       </form>
       {loading && <div className="loading-overlay">Loading...</div>}
+      </div>
     </>
   );
 };

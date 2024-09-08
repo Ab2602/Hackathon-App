@@ -1,0 +1,77 @@
+.challenge_time{
+    background: #FFCE5C;
+    border-radius: 5px ;
+    display: flex;
+    padding: 6px 0px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    color: black;
+    width: 464px;
+}
+
+.challenge_detail_card{
+    color: white;
+    background-color: #003145    ;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding:0vh  10vh;
+    height: 350px  
+}
+
+.challenge_level{
+    background-color: white;
+    color: black;
+    padding: 3px;
+    font-size: 13px;
+    border-radius: 3px;
+    width:10vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.challenge_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vh 10vh;
+
+}
+
+.challenge_buttons p{
+    border-bottom: 2px solid black;
+}
+
+.challenge_edit{
+    background-color: #28a745;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    
+    cursor: pointer;
+}
+
+.challenge_delete{
+    background-color: white;
+    margin-left: 2vh;
+    color:red;
+    padding: 8px 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.challenge-detail
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.challenge-detail p{
+    width: 88%;
+    color: #64607D;
+}

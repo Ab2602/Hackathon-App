@@ -1,0 +1,35 @@
+.form{
+    padding: 0vh 10vh;
+   
+}
+
+
+.form-data label{
+    font-size: 15px;
+    color: #333333;
+    font-size: 15px;
+}
+
+.form-data input{
+    margin: 1.5vh 0px;
+    width: 435px;
+    padding: 1vh;
+    border: 1px solid #B7B7B7;
+    border-radius: 5px;
+}
+
+.form-data textarea{
+    padding: 1vh;
+    border: 1px solid #B7B7B7;
+    border-radius: 5px;
+}
+
+.form-data select{
+    margin: 10px 0px;
+  }
+  
+  .form-data select {
+    padding: 7px;
+    width: 20%;
+  }
+  
