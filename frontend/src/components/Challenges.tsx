@@ -38,7 +38,7 @@ const Challenges = () => {
 
   // Fetch challenges based on the debounced search term
   useEffect(() => {
-    fetch("http://localhost:3001/api/challenges")
+    fetch("https://hackathon-app-8j8c.vercel.app/api/challenges")
       .then((response) => response.json())
       .then((data: Challenge[]) => {
         if (Array.isArray(data) && data.length > 0) {
