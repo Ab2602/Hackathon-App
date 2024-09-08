@@ -29,7 +29,7 @@ const ChallengeDetail = () => {
 
   const handleDelete = () => {
     if (id) {
-      fetch(`http://localhost:3001/api/challenges/${id}`, {
+      fetch(`https://hackathon-app-8j8c.vercel.app/api/challenges/${id}`, {
         method: 'DELETE',
       })
         .then(response => {
