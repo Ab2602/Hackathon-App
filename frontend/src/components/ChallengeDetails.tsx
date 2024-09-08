@@ -20,7 +20,7 @@ const ChallengeDetail = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:3001/api/challenges/${id}`)
+      fetch(`https://hackathon-app-nx7f.vercel.app/api/challenges/${id}`)
         .then(response => response.json())
         .then(data => setChallenge(data))
         .catch(error => console.error('Error fetching challenge details:', error));
@@ -29,7 +29,7 @@ const ChallengeDetail = () => {
 
   const handleDelete = () => {
     if (id) {
-      fetch(`https://hackathon-app-8j8c.vercel.app/api/challenges/${id}`, {
+      fetch(`https://hackathon-app-nx7f.vercel.app/api/challenges/${id}`, {
         method: 'DELETE',
       })
         .then(response => {

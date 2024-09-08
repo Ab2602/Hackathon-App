@@ -30,7 +30,7 @@ const CreateChallenge = () => {
     }
 
     try {
-      const response = await fetch("https://hackathon-app-8j8c.vercel.app/api/challenges", {
+      const response = await fetch("https://hackathon-app-nx7f.vercel.app/api/challenges", {
         method: "POST",
         body: formData,
       });
