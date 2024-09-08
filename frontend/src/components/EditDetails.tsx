@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import "../assets/styles/edit_challenge.css";
-import { IoMdCloudUpload } from "react-icons/io";
 
 const EditDetails = () => {
   const { id } = useParams();
