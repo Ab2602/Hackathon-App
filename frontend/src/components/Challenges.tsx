@@ -84,7 +84,7 @@ const Challenges = () => {
         }
       });
       setTimers(newTimers);
-    }, 500);
+    }, 1000);
 
     return () => clearInterval(interval);
   };
