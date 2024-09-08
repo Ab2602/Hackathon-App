@@ -8,7 +8,11 @@ const cors = require("cors");
 const app = express();
 
 // Middleware which allows frontend to interact with backend [cors]
-app.use(cors());
+app.use(cors({
+  origin: 'https://hackathon-app-5y89.vercel.app/'
+}
+  
+));
 app.use(express.json());
 
 // Set up PostgreSQL pool with Vercel connection string
